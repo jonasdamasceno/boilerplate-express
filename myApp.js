@@ -1,9 +1,10 @@
 let express = require('express');
 let app = express();
 
-const message = "Hello World";
-
-console.log(message);
+const x = (req, res)  => {
+    res.send("Hello Express")
+};
+app.get('/', x)
 
 module.exports = app;
 
